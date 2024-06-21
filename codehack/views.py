@@ -1,4 +1,5 @@
 from django.shortcuts import render
+import json
 from .models import Post
 
 # Create your views here.
@@ -7,6 +8,7 @@ def index(request):
     return render(request, 'codehack/index.html', {'posts': posts})
 
 def post(request):
-    context = Post(fields=request.POST['data'])
+    datas = json.loads(request.body)
+    context = Post(fields=datas)
     context.save()
     return render(request, 'codehack/post.html')
