@@ -124,13 +124,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 #STATICFILES_DIRS = [STATIC_DIR,] #ローカル環境
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static') #本番環境
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
-]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
