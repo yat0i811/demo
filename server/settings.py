@@ -127,7 +127,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 #STATICFILES_DIRS = [STATIC_DIR,] #ローカル環境
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/') #本番環境
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') #本番環境
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
