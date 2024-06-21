@@ -10,7 +10,7 @@ def index(request):
 
 def post(request):
     datas = json.loads(request.body)
-    context = Post(fields=datas)
+    context = Post(text=datas['value'])
     context.save()
     data = {
         'message': '登録完了'
